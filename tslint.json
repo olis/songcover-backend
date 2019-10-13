@@ -5,10 +5,10 @@
   "rules": {
     "trailing-comma": [false],
     "ordered-imports": false,
-    "object-literal-sort-keys": {
-      "options": "match-declaration-order"
-    },
-    "interface-name": [true, "never-prefix"]
+    "object-literal-sort-keys": false,
+    "interface-name": [true, "never-prefix"],
+    "arrow-parens": false,
+    "no-console": false
   },
   "rulesDirectory": []
 }

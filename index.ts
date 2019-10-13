@@ -55,18 +55,18 @@ const port = process.env.PORT || 5000;
 
 app.get("/", (req, res) => res.send("Hello World"));
 
-app.get("/songs", (reag, res) => {
-  const decoratedSongs = songs.map(
-    // tslint:disable-next-line: arrow-parens
-    song => {
-      song.snippet = Wikipedia.getSnippet(song);
+app.get("/songs", async (reag, res) => {
+  const decoratedSongs = await Promise.all(
+    songs.map(async song => {
+      const snippet = await Wikipedia.getSnippet(song);
+      song.snippet = snippet;
+
       return song;
-    }
+    })
   );
   res.send(decoratedSongs);
 });
 
 app.listen(port, () =>
-  // tslint:disable-next-line:no-console
   console.log(`SongCover server listening on port ${port}!`)
 );
