@@ -58,7 +58,7 @@ const app = express();
 app.use(cors());
 // app.options("*", cors());
 // const port = 5000;
-const port = 80;
+const port = 5000;
 
 app.get("/", (req, res) => res.send("Hello World"));
 
