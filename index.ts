@@ -1,13 +1,8 @@
 import express from "express";
 import cors from "cors";
 
-interface Song {
-  id: string;
-  title: string;
-  artist: string;
-  key: string;
-  bpm: number;
-}
+import Song from "./src/domain/song";
+import Wikipedia from "./src/connection/wikipedia";
 
 const songs: Song[] = [
   {
@@ -56,14 +51,19 @@ const songs: Song[] = [
 
 const app = express();
 app.use(cors());
-// app.options("*", cors());
-// const port = 5000;
 const port = process.env.PORT || 5000;
 
 app.get("/", (req, res) => res.send("Hello World"));
 
 app.get("/songs", (reag, res) => {
-  res.send(songs);
+  const decoratedSongs = songs.map(
+    // tslint:disable-next-line: arrow-parens
+    song => {
+      song.snippet = Wikipedia.getSnippet(song);
+      return song;
+    }
+  );
+  res.send(decoratedSongs);
 });
 
 app.listen(port, () =>
