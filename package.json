@@ -8,6 +8,7 @@
     "build": "tsc",
     "start": "node dist/index.js",
     "server": "nodemon .",
+    "preserver": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "olis",
