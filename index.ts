@@ -10,42 +10,48 @@ const songs: Song[] = [
     title: "Jumpin' Jack Flash",
     artist: "The Rolling Stones",
     key: "Bb",
-    bpm: 137
+    bpm: 137,
+    wikiTitle: "Jumpin' Jack Flash"
   },
   {
     id: "2",
     title: "Hard to Handle",
     artist: "The Black Crows",
     key: "B",
-    bpm: 103
+    bpm: 103,
+    wikiTitle: "Hard to Handle (song)"
   },
   {
     id: "3",
     title: "Mustang Sally",
     artist: "Wilson Pickett",
     key: "C",
-    bpm: 110
+    bpm: 110,
+    wikiTitle: "Mustang Sally (song)"
   },
   {
     id: "4",
     title: "Cocaine",
     artist: "Eric Clapton",
     key: "A",
-    bpm: 105
+    bpm: 105,
+    wikiTitle: "Cocaine (song)"
   },
   {
     id: "5",
     title: "Ain't no Sunshine",
     artist: "Bill Withers",
     key: "Em",
-    bpm: 79
+    bpm: 79,
+    wikiTitle: "Ain't No Sunshine"
   },
   {
     id: "6",
     title: "Whish You Were Here",
     artist: "Pink Floyd",
     key: "G",
-    bpm: 61
+    bpm: 61,
+    wikiTitle: "Wish You Were Here (Pink Floyd song)"
   }
 ];
 

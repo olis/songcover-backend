@@ -3,7 +3,7 @@ import Song from "../domain/song";
 
 const Wikipedia = {
   getSnippet: async (song: Song) => {
-    const snippet = await fetchSnippetFromWikipedia(song.title);
+    const snippet = await fetchSnippetFromWikipedia(song.wikiTitle);
 
     return snippet;
   }

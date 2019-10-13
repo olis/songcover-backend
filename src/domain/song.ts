@@ -4,5 +4,6 @@ export default interface Song {
   artist: string;
   key: string;
   bpm: number;
+  wikiTitle: string;
   snippet?: string;
 }
